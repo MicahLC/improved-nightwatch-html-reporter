@@ -24,9 +24,9 @@ h1 Nightwatch Results
 									if testCase.isFailure
 										div.status &#10005;
 										div.name= testCase.message + " " + testCase.failure
-										each sshot in testCase.screenshots
-											div.screenshot
-												img(src= sshot)
 									else
 										div.status &#10003;
 										div.name= testCase.message + ((testCase.skipped) ? " (skipped)" : "")
+									each sshot in testCase.screenshots
+										div.screenshot
+											img(src= sshot)
