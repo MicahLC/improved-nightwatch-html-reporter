@@ -24,9 +24,13 @@ h1 Nightwatch Results
 									if testCase.isFailure
 										div.status &#10005;
 										div.name= testCase.message + " " + testCase.failure
+										div.stackTrace= testCase.stackTrace
 									else
 										div.status &#10003;
 										div.name= testCase.message + ((testCase.skipped) ? " (skipped)" : "")
 									each sshot in testCase.screenshots
 										div.screenshot
 											img(src= sshot)
+							if (suite.isFailure && suite.lastError.name !== 'NightwatchAssertError')
+								li
+									div.lastError= suite.lastError.stack
