@@ -65,7 +65,12 @@ ul{
 }
 
 .testcase .name {
-  display: inline-block;
+  display: inline;
+}
+
+.testcase .stacktrace {
+  padding-left: 3em;
+  display: block;
 }
 
 .success{
