@@ -33,5 +33,6 @@ h1 Nightwatch Results
 										div.screenshot
 											img(src= sshot)
 							if (suite.isFailure && suite.lastError.name !== 'NightwatchAssertError')
-								li
-									div.lastError= 'Last error:' + suite.lastError.stack
+								li.lastError= 'Last error:'
+								each line in suite.lastError.stack.split('\n')
+									li.lastError= line.trim()
