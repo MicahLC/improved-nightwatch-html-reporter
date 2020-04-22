@@ -23,7 +23,7 @@ h1 Nightwatch Results
 								li(class= (testCase.isFailure) ? 'testcase error' : 'testcase success')
 									if testCase.isFailure
 										div.status &#10005;
-										div.name= testCase.message + " " + testCase.failure
+										div.name= (testCase.message + ' ' + testCase.failure).replace(/\u001b\[0;?\d*m/g, '')
 										each stackLine in testCase.stackTrace.split('\n')
 											div.stacktrace= stackLine
 									else
