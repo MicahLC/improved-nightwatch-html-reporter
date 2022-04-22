@@ -22,7 +22,7 @@
   "dependencies": {
     "async": "^2.1.4",
     "lodash": "^4.17.15",
-    "nconf": "^0.8.4",
+    "nconf": "^0.11.4",
     "opn": "^5.4.0",
     "pug": "^2.0.0-beta11",
     "readdirp": "^3.3.0",
